@@ -30,6 +30,8 @@ AtMultiTouch::AtMultiTouch() {
  ***********************************************************/
 void AtMultiTouch::start(uint8_t interruptPin){
 	
+	changePin = interruptPin;
+
 	pinMode(changePin, INPUT);
 	keyHit = false;
 	//Begin the i2c communication
